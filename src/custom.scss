@@ -1,0 +1,45 @@
+////////////////////////
+// 1.-Enlaces
+///////////////////////
+@import "generales";
+@import "inicio";
+@import "nosotros";
+@import "recetas";
+@import "productos";
+
+//////////////////////
+// Patrones de colores
+//////////////////////
+$bg-empresa1: #592e0b; // Color chocolate para los header y el footer principal
+$bg-empresa2: #20c997; // Color verde para el footer de los modales
+$gray-200: #d6d4d4; // Color gris de fondo personalizado del body de los modales
+
+
+
+////////////////////////////////////////////////////////
+// Importacion de modulos scss de Boostrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+//////////////////////
+
+/////////////////////////
+// Variables personalizadas
+/////////////////////////
+$bg-custom-gray: $gray-200;
+
+////////////////////////
+// Definicion de uevas clases de Boostrap
+///////////////////////
+.bg-custom-gray {
+  background-color: $bg-custom-gray;
+}
+
+
+
+
+
+
+
+/////////////////
+// Mis estilos
+/////////////////
+
