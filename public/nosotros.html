@@ -2,261 +2,411 @@
 <html lang="es">
   <head>
     <!-- Metadatos -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Juan Carlos San Segundo Corchuelo" />
-    <meta name="description" content="Pagina Web de Caramelos ESOPO" />
-    <meta
-      name="keywords"
-      content="Caramelos duros, Caramelos Blandos, Gominolas, Fiestas, Eventos"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Carlos San Segundo Corchuelo">
+    <meta name="description" content="Pagina Web de Caramelos ESOPO">
+    <meta name="keywords" content="Caramelos duros, Caramelos Blandos, Gominolas, Fiestas, Eventos">
     <!-- Titulo -->
     <title>Caramelos ESOPO</title>
     <!-- Favicon -->
-    <link
-      rel=" shortcut icon"
-      href="imagenes/tropical-storm.svg"
-      type="image/x-icon"
-    />
-    <!-- BOOSTRAP -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link rel="shortcut icon" href="imagenes/tropical-storm.svg" type="image/x-icon">
     <!-- Iconos de BOOSTRAP -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <!-- Hoja de CSS -->
-    <link rel="stylesheet" href="scss/styles.css" />
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
     <!-- Barra de Navegacion -->
-    <header class="header container-fluid">
+    <header class="container-fluid header">
       <div class="row">
-        <div class="col imagen-container">
-          <img src="imagenes/logo-esopo.png" alt="Logotipo de Caramelos ESOPO" width="80">
+        <div class="col d-flex text-white">
+          <img class="img" src="imagenes/logo-esopo.png" alt="Logotipo de Caramelos ESOPO" width="80">
           <h1 class="nombre-empresa">Caramelos ESOPO, s.l.</h1>
-        </div>       
-        
-        <nav class="col navbar navbar-expand-sm d-flex">
-          <div class="container">
-            <a class="navbar-brand" href="#"></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+        </div>
+  
+        <!-- Navegador -->
+        <nav class="col navbar-expand-sm d-flex">
+          <div class="container-fluid">          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Alternar navegacion">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+            <div class="collapse navbar-collapse id="navbarToggler"> 
+              <a class="navbar-brand" href="#">
+                <img src="imagenes/caramelo_1.png" width="70" alt="Imagen caramelo">
+              </a>           
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="nosotros.html">Nosotros</a>
+                  <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="recetas.html">Recetas</a>
+                  <a class="nav-link text-white" href="recetas.html">Recetas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="productos.html">Productos</a>
+                  <a class="nav-link text-white" href="productos.html">Productos</a>
                 </li>
               </ul>
             </div>
-            <div class="persona col-2 justify-content-center align-items-center">
+            <div class="col-3 persona d-flex justify-content-center align-items-center text-center">
               <ul>
-                <li><a href="#"><i class="bi bi-person-circle"></i></a></li>
-                <!-- <li><a href="#"><i class="bi bi-cart4"></i></a></li> -->
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#login"><i id="icono" class="bi bi-person-circle text-white"></i></a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#"><i class="bi bi-cart4 text-white"></i></a></li>
               </ul>
             </div>
           </div>
         </nav>
-        
-      </div>
-    </header>
-    
-    
-    <!-- Footer -->
-    <footer class="container-fluid py-2">
-      <div class="row">
-        <div class="col" id="contenedor-1">
-          <div>
-            <img
-              id="logo-footer"
-              alt="Logo"
-              title="Logo Esopo"
-              src="imagenes/logo-esopo.png"
-              width="60"
-            />
-          </div>
-          <div>
-            <ul>
-              <li>
-                <a
-                  href="#"
-                  previewlistener="true"
-                  target="_blank"
-                  rel="noopener noeferrer"
-                >
-                  <i class="bi bi-github"></i>>Aviso legal</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  previewlistener="true"
-                  target="_blank"
-                  rel="noopener noeferrer"
-                >
-                  <i class="bi bi-github"></i>>Política de privacidad</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  previewlistener="true"
-                  target="_blank"
-                  rel="noopener noeferrer"
-                >
-                  <i class="bi bi-github"></i>>Política de cookies</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  previewlistener="true"
-                  target="_blank"
-                  rel="noopener noeferrer"
-                >
-                  <i class="bi bi-github"></i>>Política de calidad</a
-                >
-              </li>
-            </ul>
+  
+        <!-- Modal del Inicio de sesion -->
+        <div id="login" class="modal" tabindex="-1" data-bs-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content" >
+              <div class="modal-header">
+                <img src="imagenes/logo-esopo.png" alt="logo empresa" width="50">
+                <h3 class="modal-title">Iniciar sesión</h3>
+                <button type="button" class="btn btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-custom-gray">
+                <!-- formulario del login -->
+                <form action="#" method="post" class="formulario_login needs-validation" novalidate name="formulario_login" id="formulario_login">
+                  
+                  <!-- Inputs y label del login -->
+                  <div class="mb-3 position-relative">
+                    <label for="email1" class="form-label">Dirección de email</label>
+                    <input type="email" class="form-control form-control-sm" id="email1" aria-describedby="emailHelp" autofocus required>
+                    <div class="invalid-tooltip">¡Por favor!, Introduce tu email</div>
+                    <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                  </div>              
+                  <div class="mb-3 position-relative">
+                    <label for="password1" class="form-label">Contraseña</label>
+                    <input type="password" name="input_pass" value="" class="form-control form-control-sm" id="password1" required>
+                    <div class="invalid-tooltip">Es necesario poner la contraseña</div>
+                    <div id="passwordHelpBlock" class="form-text">
+                      Su contraseña debe tener entre 4 y 10 caracteres, contener letras y números, y no debe contener espacios ni emojis.
+                    </div>
+                  </div>
+  
+                  <!-- Mostrar contraseña -->
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" name="input_ver" value="ver" onclick="ver_password();" class="form-check-input" id="Check1">
+                    <label class="form-check-label" for="Check1">Mostrar Contraseña</label>
+                  </div>
+  
+                  <!-- Recuperacion contraseña -->
+                  <div class="container">  
+                    <div class="row gx-5">
+                      <div class="col-8">
+                        <a href="#" data-bs-target="#recontra" data-bs-toggle="modal">¿Has olvidado tu contraseña?</a>
+                      </div>
+                      <div class="col-4">
+                        <button type="submit" class="btn btn-primary" id="acceder">ACCEDER</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+  
+                <!-- Nuevos registros -->
+                <div class="container py-3 text-center">
+                  <p>Si no estás registrado: ¡Registrate!</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registro" >CREAR CUENTA</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-terciary bg-light" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
+  
+        <!-- Modal de Recuperacion contraseña -->      
+        <div id="recontra" class="modal" tabindex="-1" data-bs-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="imagenes/logo-esopo.png" alt="logo empresa" width="50">
+                <h3 class="modal-title">¿Has olvidado tu contraseña?</h3>
+                <button type="button" class="btn btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-custom-gray">
+                <h4>Recupera tu contraseña aquí:</h4>
+                <p>Introduzca su dirección de correo electrónico y recibirá<br>
+                un correo con el enlace para restaurar su contraseña.</p>
+                <form action="#" method="post" class="formulario_recontra" name="formulario_recontra" id="formulario_recontra">
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text bg-info" id="addon-wrapping">@</span>
+                    <input type="email" class="form-control form-control-sm" placeholder="Introduce tu email" id="InputEmail2" aria-describedby="emailHelp" autofocus required>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#"><button type="button" class="btn btn-primary">Enviar</button></a>
+                <a href="#" data-bs-target="#login" data-bs-toggle="modal"><button type="button" class="btn btnterciay bg-light" data-bs-dismiss="modal">🠔Volver a Inicio de sesión</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Modal del Registro -->
+        <div id="registro" class="modal modal_registro" tabindex="-1" data-bs-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="imagenes/logo-esopo.png" alt="logo empresa" width="50">
+                <h3 class="modal-title">Crear nueva cuenta</h3>
+                <button type="button" class="btn btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-custom-gray">
+                <!-- Fornulario del registro  -->
+                <form action="#" method="post" class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-6 position-relative">
+                    <label for="nombre" class="form-label">Nombre</label>                  
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>                 
+                    <div class="invalid-tooltip">Es necesario poner el nombre</div>
+                  </div>
+                  <div class="col-md-6 position-relative">
+                    <label for="surname" class="form-label">Apellido/s</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                    <div class="invalid-tooltip">Es necesario poner el/los apellidos</div>
+                  </div>                
+                  <div class="col-md-6 position-relative">
+                    <label for="password1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password1" required>
+                    <div class="invalid-tooltip">Es necesario poner la contraseña</div>                  
+                  </div>
+                  <div class="col-md-6 position-relative">
+                    <label for="password2" class="form-label">Repetir Contraseña</label>
+                    <input type="password" class="form-control" id="password2" required>
+                    <div class="invalid-tooltip">Es necesario repetir la contraseña</div>
+                  </div>
+                  <div id="passwordHelpBlock" class="col-12 form-text">
+                    Su contraseña debe tener entre 4 y 10 caracteres, contener letras y números, y no debe contener espacios ni emojis.
+                  </div>
+                  <div class="col-12 position-relative mb-3">
+                    <label for="email1" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email1" name="email1" placeholder="nombre-de-usuario@ionos.mix" required co>
+                    <div class="invalid-tooltip">Es necesario poner el correo</div>
+                  </div>                            
+                  <div class="col-8 position-relative mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" required>
+                      <label class="form-check-label" for="gridCheck">
+                        <a href="#">Aceptar Términos y Condiciones</a>
+                      </label>
+                      <div class="invalid-tooltip">Es necesario aceptar los términos</div>
+                    </div>                
+                  </div>
+                  <div class="col-4 mb-3">
+                    <input type="reset" class="btn btn-success btn-sm" value="Resetear">
+                  </div>                
+                  <div class="col mb-3 text-center">
+                    <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">      
+                <button type="button" class="btn btn-terciary bg-light" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>    
+    <!-- Contenido principal -->
+    <main class="container-fluid main">
+      <section class="container section py-3">
 
-        <div class="col" id="contenedor-2">
-          <h4>Nosotros</h4>
+        <h1 class="h1"><b>SOBRE NOSOTROS</b></h1>
+
+        <article class="row">
+          
+          <h4 class="h4">Nuestra historia</h4>
+          
+          <div class="col col-6-md linea_1">
+            <figure>
+              <img src="./imagenes/Fabrica_0.jpg" alt="fabrica vieja" class="img-fluid img_1">
+              <figcaption class="figcaption">El primer obrador</figcaption>
+            </figure>
+          </div>
+          <div class="col col-6-md">
+            <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae qui sapiente obcaecati commodi totam recusandae assumenda facere a nam similique ex reprehenderit itaque cum, sequi ea maiores rem sit voluptas beatae accusamus eius nisi alias laboriosam eaque? Laboriosam sint ad provident similique accusantium nihil unde voluptas pariatur ratione ipsum! Repudiandae?</p>
+          </div>
+          </div>      
+        </article>
+
+        <article class="row pb-3">
+          <div class="col col-6-lg linea_2 d-flex">
+            <figure>
+              <img src="./imagenes/Fabrica_1.jpg" alt="fabrica de ilusión" class="img-fluid img_2">
+              <figcaption class="figcaption">El obrador de ensueño</figcaption>
+            </figure>
+            <figure>
+              <img src="./imagenes/Fabrica_2.jpg" alt="fabrica nueva" class="img-fluid img_2">
+              <figcaption class="figcaption">El obrador actual</figcaption>
+            </figure>
+          </div>
+          <div class="col col-6-lg">
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nesciunt eveniet autem repellendus iusto odit reiciendis sunt? Optio, autem laboriosam dicta impedit eaque tempore, doloremque sed placeat reprehenderit porro vitae. Provident reiciendis, alias minima vero dolore ipsum, rem laboriosam sint nesciunt dicta non dolores adipisci consectetur repudiandae impedit illo deleniti!</p>
+          </div>
+          </div>      
+        </article>
+
+        <articlen class="row pb-3">
+          
+          <h4 class="h4">Nuestro compromiso</h4>
+          
+          <div class="col col-6-lg linea_3">
+            <img src="./imagenes/logoBRG.png" alt="logo brg" class="img-fluid img_3 p-2">
+            <img src="./imagenes/logoIFS.png" alt="logo ifs" class="img-fluid img_3 p-2">
+            <img src="./imagenes/logoISO.png" alt="logo iso" class="img-fluid img_3 p-2">  
+          </div>
+            <div class="col col-6-lg">
+              <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam enim incidunt suscipit. Quo, vel ipsa. Consequatur veritatis itaque exercitationem eligendi deserunt sapiente aperiam nisi quia modi, pariatur laborum enim doloremque quasi consectetur, a rem expedita blanditiis vitae fugit quo est vel ad iste odio? Porro distinctio in voluptates architecto sint repudiandae, vitae et assumenda dicta ipsum minima! Praesentium natus placeat iusto odio eaque itaque, eveniet excepturi vel id quasi velit ratione eligendi. Minus voluptatum, corrupti, ex error maiores a, at iste deleniti dignissimos accusantium recusandae! Modi cumque aspernatur quasi vel?</p>
+            </div>
+            
+        </articlen>
+
+        <article class="row ">
+          <h4 class="h4">Nuestros productos</h4>
+          <div class="col col-6-lg linea_4">
+            <img src="./imagenes/grupo_caramelos.png" alt="grupo caramelos" class="img-fluid img_4">          
+          </div>
+          <div class="col col-6-lg">
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nesciunt eveniet autem repellendus iusto odit reiciendis sunt? Optio, autem laboriosam dicta impedit eaque tempore, doloremque sed placeat reprehenderit porro vitae. Provident reiciendis, alias minima vero dolore ipsum, rem laboriosam sint nesciunt dicta non dolores adipisci consectetur repudiandae impedit illo deleniti!</p>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nesciunt eveniet autem repellendus iusto odit reiciendis sunt? Optio, autem laboriosam dicta impedit eaque tempore, doloremque sed placeat reprehenderit porro vitae. Provident reiciendis, alias minima vero dolore ipsum, rem laboriosam sint nesciunt dicta non dolores adipisci consectetur repudiandae impedit illo deleniti!</p>
+            <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nesciunt eveniet autem repellendus iusto odit reiciendis sunt? Optio, autem laboriosam dicta impedit eaque tempore, doloremque sed placeat reprehenderit porro vitae. Provident reiciendis, alias minima vero dolore ipsum, rem laboriosam sint nesciunt dicta non dolores adipisci consectetur repudiandae impedit illo deleniti!</p>
+          </div>
+          </div>      
+        </article>
+      </section>
+    </main>
+   <!-- Footer -->
+  <footer class="container-fluid py-2">
+    <div class="row">
+      <!-- Columna 1 -->
+      <div class="col" id="contenedor-1">
+        <div>
+            <img id="logo-footer" alt="Logo" title="Logo Esopo" src="imagenes/logo-esopo.png" width="60">
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="#" previewlistener="true" target="_blank" rel="noopener noeferrer">-Aviso legal</a>
+            </li>
+            <li>
+              <a href="#" previewlistener="true" target="_blank" rel="noopener noeferrer">-Política de privacidad</a>
+            </li>
+            <li>
+              <a href="#" previewlistener="true" target="_blank" rel="noopener noeferrer">-Política de cookies</a>
+            </li>
+            <li>
+              <a href="#" previewlistener="true" target="_blank" rel="noopener noeferrer">-Política de calidad</a>
+            </li>
+          </ul>
+        </div>            
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col" id="contenedor-2">
+          <h4 class="text-white">Nosotros</h4>
           <div>
             <ul>
-              <li><a href="#" previewlistener="true">Nosotros</a></li>
-              <li><a href="#" previewlistener="true">I+D+i</a></li>
-              <li><a href="#" previewlistener="true">Noticias</a></li>
-              <li><a href="#" previewlistener="true">FAQ</a></li>
-              <li><a href="#" previewlistener="true">Canal Ético</a></li>
+                <li><a href="#" previewlistener="true">Nosotros</a></li>
+                <li><a href="#" previewlistener="true">I+D+i</a></li>
+                <li><a href="#" previewlistener="true">Noticias</a></li>
+                <li><a href="#" previewlistener="true">FAQ</a></li>
+                <li><a href="#" previewlistener="true">Canal Ético</a></li>
             </ul>
           </div>
           <div class="certificados">
             <div id="ifs">
-              <img
-                alt="Logo IFS"
-                src="Imagenes\logoIFS.png"
-                width="65%"
-                height="50%"
-              />
+                <img alt="Logo IFS" src="Imagenes\logoIFS.png" width="65%" height="50%">
             </div>
             <div id="iso">
-              <img
-                alt="Logo ISO"
-                src="Imagenes\logoISO.png"
-                width="85%"
-                height="50%"
-              />
+                <img alt="Logo ISO" src="Imagenes\logoISO.png" width="85%" height="50%">
             </div>
             <div id="brg">
-              <img
-                alt="Logo BRC"
-                src="Imagenes\logoBRG.png"
-                width="50%"
-                height="50%"
-              />
+                <img alt="Logo BRC" src="Imagenes\logoBRG.png" width="50%" height="50%">
             </div>
-          </div>
-        </div>
-
-        <div class="col" id="contenedor-3">
-          <h4>Productos</h4>
-          <div>
-            <ul>
-              <li><a href="#" previewlistener="true">Gama Esopo</a></li>
-              <li>
-                <a href="#" previewlistener="true">Caramelo Personalizado</a>
-              </li>
-              <li>
-                <a href="#" previewlistener="true">Caramelos Marca Blanca</a>
-              </li>
-              <li><a href="#" previewlistener="true">Caramelo Saludable</a></li>
-              <li><a href="#" previewlistener="true">Biomoments</a></li>
-              <li><a href="#" previewlistener="true">Caramelos Farmacia</a></li>
-              <li>
-                <a href="#" previewlistener="true">Caramelos para Fiestas</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col" id="contenedor-4">
-          <h4>Caramelos ESOPO, s.l</h4>
-          <div>
-            <p>
-              C/ Gomaespma, nº 19<br />
-              42825 - Almoradi<br />
-              Sumsumcordem, SPAINb<br />
-              T: +92 536 98 52 49 <br />
-            </p>
-          </div>
-          <div
-            class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-start"
-          >
-            <a
-              href="http://twitter.com/freecodecampES"
-              target="_blank"
-              rel="noopener noeferrer"
-            >
-              <i class="bi bi-twitter-x"></i>
-            </a>
-            <a
-              href="http://github.com/freecodecamp/freecodecamp"
-              target="_blank"
-              rel="noopener noeferrer"
-            >
-              <i class="bi bi-github"></i>
-            </a>
-            <a
-              href="http://www.linkedin.com"
-              target="_blank"
-              rel="noopener noeferrer"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-            <a
-              href="http://www.instagram.com/freecodecamp"
-              target="_blank"
-              rel="noopener noeferrer"
-            >
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a
-              href="mailto:jucasase.1560@gmail.com"
-              target="_blank"
-              rel="noopener noeferrer"
-            >
-              <i class="bi bi-envelope"></i>
-            </a>
-          </div>
-        </div>
+          </div> 
       </div>
-    </footer>
+      
+      <!-- Columna 3 -->
+      <div class="col" id="contenedor-3">
+          <h4 class="text-white">Productos </h4>
+          <div>
+              <ul>
+                  <li><a href="#" previewlistener="true">Gama Esopo</a></li>
+                  <li><a href="#" previewlistener="true">Caramelo Personalizado</a></li>
+                  <li><a href="#" previewlistener="true">Caramelos Marca Blanca</a></li>
+                  <li><a href="#" previewlistener="true">Caramelo Saludable</a></li>
+                  <li><a href="#" previewlistener="true">Biomoments</a></li>
+                  <li><a href="#" previewlistener="true">Caramelos Farmacia</a></li>
+                  <li><a href="#" previewlistener="true">Caramelos para Fiestas</a></li>
+              </ul>
+          </div>
+      </div>      
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-  </body>
+      <!-- Columna 4 -->
+      <div class="col" id="contenedor-4">
+        <h4>Caramelos ESOPO, s.l</h4>
+        <div>
+          <p>
+            C/ Gomaespma, nº 19<br>
+            42825 - Almoradi<br>
+            Sumsumcordem, SPAINb<br>
+            T: +92 536 98 52 49 <br>
+          </p>
+        </div>      
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-start">
+          <a href="http://twitter.com/freecodecampES" target="_blank" rel="noopener noeferrer">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="http://github.com/freecodecamp/freecodecamp" target="_blank" rel="noopener noeferrer">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="http://www.telegram.org" target="_blank" rel="noopener noeferrer">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a href="http://www.whatsapp.com" target="_blank" rel="noopener noeferrer">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="mailto:jucasase.1560@gmail.com" target="_blank" rel="noopener noeferrer">
+            <i class="bi bi-envelope"></i>
+          </a>
+        </div>       
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Boostrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Sripts de este proeyecto -->
+  <script src="../public/js/script.js"></script>
+  <!-- Script para el formulario de registro -->
+  <script>
+    // JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+    (() => {
+      'use strict'
+
+    // Obtenga todos los formularios a los que queremos aplicar estilos de validación Bootstrap personalizados
+      const forms = document.querySelectorAll('.needs-validation')
+
+    // Bucle sobre las validaciones y evitar la presentación propia del navegador
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
 </html>
