@@ -1,7 +1,7 @@
 $bg-empresa1: #592e0b;
 $bg-empresa2: #20c997;
 // BARRA DE NAVEGACION
-header {
+.header {
   padding: 5px;
   background-color: $bg-empresa1;
   .img {
@@ -95,53 +95,51 @@ header {
 
 
 //Estilos para el Footer
-footer {
+.footer {
   /*Color de fondo*/
   background-color: $bg-empresa1;
   /*Estilo de los enlaces*/
-  ul {
-    li {
-      list-style: none;
-      display: block;
-      a {
-        font-size: 0.8em;
-        color: #fff;
-        text-decoration: none;
-        &:hover {
-          color: yellow;
-          font-size: 1.1em;
-        }
-      }
-    }
+  
+  .footer__li {
+    font-size: 1.3em;
+    list-style: none;
+    display: block;
   }
-  #contenedor-1 {
-    #logo-footer {
-      margin-left: 35px;
-      border-radius: 50%;
+  .footer__a {
+    font-size: 0.8em;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: yellow;
+      font-size: 1.1em;
     }
+  }  
+  
+  .footer__logo {
+    margin-left: 35px;
+    border-radius: 50%;
   }
-  .certificados {
+  
+  .footer__certificados {
     display: inline-flex;
   }
-  #contenedor-4 {
-    font-size: 0.9em;
+
+  .footer__h4 {
+    font-size: 1.5em;
     color: #fff;
-    p {
-      margin-left: 20px;
-    }
-    //Enlaces redes sociales
-    a {
-      font-size: 0.9em;
-      color: #fff;
-      text-decoration: none;
-      i {
-        display: inline;
-        font-size: 2em;
-        margin: 0 10px;
-        &:hover {
-          color: #000;
-        }
-      }
-    }
   }
+
+  .footer__p {
+    margin-left: 20px;
+  }
+    //Enlaces redes sociales    
+  .footer__i {
+    display: inline;
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    &:hover {
+      color: #000;
+    }
+  }  
 }
