@@ -72,68 +72,64 @@ $bg-empresa2: #20c997;
   }
 }
 
-
-
-
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
-	.formulario {
-		grid-template-columns: 1fr;
-	}
+  .formulario {
+    grid-template-columns: 1fr;
+  }
 
-	.formulario__grupo-terminos, 
-	.formulario__mensaje,
-	.formulario__grupo-btn-enviar {
-		grid-column: 1;
-	}
+  .formulario__grupo-terminos,
+  .formulario__mensaje,
+  .formulario__grupo-btn-enviar {
+    grid-column: 1;
+  }
 
-	.formulario__btn {
-		width: 100%;
-	}
+  .formulario__btn {
+    width: 100%;
+  }
 }
-
-
 
 //Estilos para el Footer
 .footer {
   /*Color de fondo*/
   background-color: $bg-empresa1;
   /*Estilo de los enlaces*/
-  
-  .footer__li {
+
+  &__li {
     font-size: 1.3em;
     list-style: none;
     display: block;
   }
-  .footer__a {
+
+  &__a {
     font-size: 0.8em;
     color: #fff;
     text-decoration: none;
     &:hover {
       color: yellow;
-      font-size: 1.1em;
+      font-size: 1em;
     }
-  }  
-  
-  .footer__logo {
+  }
+
+  &__logo {
     margin-left: 35px;
     border-radius: 50%;
   }
-  
-  .footer__certificados {
+
+  &__certificados {
     display: inline-flex;
   }
 
-  .footer__h4 {
+  &__h4 {
     font-size: 1.5em;
     color: #fff;
   }
 
-  .footer__p {
+  &__p {
     margin-left: 20px;
   }
-    //Enlaces redes sociales    
-  .footer__i {
+  //Enlaces redes sociales
+  &__i {
     display: inline;
     font-size: 2em;
     color: #fff;
@@ -141,5 +137,5 @@ $bg-empresa2: #20c997;
     &:hover {
       color: #000;
     }
-  }  
+  }
 }
